@@ -56,7 +56,7 @@ end
 
 script "install ctrlp from Github" do
   interpreter "bash"
-  url = "git@github.com:kien/ctrlp.vim.git"
+  url = "https://github.com/kien/ctrlp.vim.git"
   code <<-EOS
     git clone #{url} #{ENV['HOME']}/.vim/bundle/ctrlp.vim
   EOS
@@ -92,7 +92,7 @@ end
 
 script "install fugitive from Github" do
   interpreter "bash"
-  url = "git://github.com/tpope/vim-fugitive.git"
+  url = "https://github.com/tpope/vim-fugitive.git"
   code <<-EOS
     git clone #{url} #{ENV['HOME']}/.vim/bundle/vim-fugitive
   EOS
@@ -101,7 +101,7 @@ end
 
 script "install vim-gitgutter from Github" do
   interpreter "bash"
-  url = "git://github.com/airblade/vim-gitgutter.git"
+  url = "https://github.com/airblade/vim-gitgutter.git"
   code <<-EOS
     git clone #{url} #{ENV['HOME']}/.vim/bundle/vim-gitgutter
   EOS
@@ -110,7 +110,7 @@ end
 
 script "install vim-sensible from Github" do
   interpreter "bash"
-  url = "git://github.com/tpope/vim-sensible.git"
+  url = "https://github.com/tpope/vim-sensible.git"
   code <<-EOS
     git clone #{url} #{ENV['HOME']}/.vim/bundle/vim-sensible
   EOS
