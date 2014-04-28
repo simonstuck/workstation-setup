@@ -1,0 +1,1 @@
+Installs oh-my-zsh with a custom .zshrc file and custom theme.
