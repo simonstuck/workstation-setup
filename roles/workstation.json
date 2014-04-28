@@ -1,7 +1,8 @@
 {
   "run_list": [ 
     "recipe[oh-my-zsh]",
-    "recipe[git]"
+    "recipe[git]",
+    "recipe[vim]"
   ],
   "imperialuser": "ss7311",
   "user": {

@@ -1,0 +1,1 @@
+Installs simple vim configuration with a few plugins.
