@@ -1,4 +1,11 @@
 {
-  "run_list": [ "recipe[oh-my-zsh]" ],
-  "imperialuser": "ss7311"
+  "run_list": [ 
+    "recipe[oh-my-zsh]",
+    "recipe[git]"
+  ],
+  "imperialuser": "ss7311",
+  "user": {
+    "full_name": "Simon Stueckemann",
+    "email": "me@simonstuck.com"
+  }
 }
