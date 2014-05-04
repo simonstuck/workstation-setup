@@ -5,7 +5,7 @@
   "default_attributes": {},
   "override_attributes": {},
 
-  "user_config": "simon",
+  "user_config": "Simon",
 
   "run_list": [ 
     "recipe[oh-my-zsh]",

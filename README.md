@@ -1,4 +1,4 @@
-workstation-setup
+Workstation Setup
 =================
 
-This repository contains Chef cookbooks to automate provisioning of OS X or Linux environments.
+This repository contains Chef cookbooks and scripts to automate setting up my environment.

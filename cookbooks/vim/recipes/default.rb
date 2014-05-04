@@ -1,56 +1,32 @@
 directory "#{ENV['HOME']}/.vim/autoload" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   recursive true
 end
 
 template "#{ENV['HOME']}/.vim/autoload/pathogen.vim" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   source "autoload/pathogen.vim.erb"
 end
 
 directory "#{ENV['HOME']}/.vim/indent" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   recursive true
 end
 
 template "#{ENV['HOME']}/.vim/indent/nc.vim" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   source "indent/nc.vim.erb"
 end
 
 directory "#{ENV['HOME']}/.vim/syntax" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   recursive true
 end
 
 template "#{ENV['HOME']}/.vim/syntax/nc.vim" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   source "syntax/nc.vim.erb"
 end
 
 template "#{ENV['HOME']}/.vim/syntax/pig.vim" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   source "syntax/pig.vim.erb"
 end
 
 directory "#{ENV['HOME']}/.vim/bundle" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   recursive true
 end
 
@@ -118,8 +94,5 @@ script "install vim-sensible from Github" do
 end
 
 template "#{ENV['HOME']}/.vimrc" do
-  mode 0755
-  owner ENV['USER']
-  group Etc.getgrgid(Process.gid).name
   source "dot.vimrc.erb"
 end
