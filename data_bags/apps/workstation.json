@@ -1,0 +1,45 @@
+{
+  "id": "workstation",
+  "dmgs": {
+    "Dropbox": {
+      "volumes_dir": "Dropbox Installer",
+      "url": "https://dl-web.dropbox.com/installer?build_key=Dropbox&build_no=2.6.31&plat=mac",
+      "checksum": "4f41e2cab832d98f1a243fbe5d240b6454075a7a"
+    }
+  },
+  "zips": {
+    "Alfred 2": {
+      "url":"http://cachefly.alfredapp.com/Alfred_2.2_243b.zip",
+      "checksum": "6901c0557d57a06368a258bba7e29e7af3436886"
+    },
+    "1Password 4": {
+      "url": "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-4.4.zip",
+      "checksum": "596f3c43f91e3724d5b421902163d17332bb09e3"
+    }
+  },
+  "plists": [
+  ],
+  "packages": {
+    "ack-grep": "",
+    "coreutils": "",
+    "nmap": "",
+    "tree": "",
+    "wget": ""
+  },
+  "brew_packages": {
+    "ack": "",
+    "coreutils": "",
+    "md5sha1sum": "",
+    "pstree": "",
+    "sloccount": "",
+    "tree": "",
+    "wget": "",
+    "cmake": "",
+    "scala": "",
+    "gradle": ""
+  },
+  "dirs": [
+    "bin",
+    "workspace"
+  ]
+}

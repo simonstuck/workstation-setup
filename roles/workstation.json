@@ -1,12 +1,96 @@
 {
+  "name":"workstation",
+  "description":"Sets up an OSX workstation",
+
   "run_list": [ 
     "recipe[oh-my-zsh]",
-    "recipe[git]",
-    "recipe[vim]"
+    "recipe[git-settings]",
+    "recipe[vim]",
+    "recipe[build-essential]",
+    "recipe[homebrew]",
+    "recipe[mac_os_x::settings]",
+    "recipe[mac_os_x::firewall]",
+    "recipe[mac_os_x::autoupdate]",
+    "recipe[workstation]"
   ],
-  "imperialuser": "ss7311",
-  "user": {
-    "full_name": "Simon Stueckemann",
-    "email": "me@simonstuck.com"
+
+  "default_attributes": {},
+  "override_attributes": {},
+  "chef_type": "role",
+
+  "user_config": "Simon",
+
+  "mac_os_x": {
+    "settings": {
+      "dock" : {
+        "domain" : "com.apple.dock",
+        "autohide" : false,
+        "dashboard-in-overlay" : false,
+        "launchanim" : true,
+        "magnification" : false,
+        "mineffect" : "genie",
+        "minimize-to-application" : false,
+        "mru-spaces" : false,
+        "showAppExposeGestureEnabled" : true,
+        "showDesktopGestureEnabled" : true,
+        "showLaunchpadGestureEnabled" : true,
+        "tilesize" : 40,
+        "wvous-bl-modifier" : 0,
+        "wvous-bl-corner" : 5
+      },
+      "trackpad" : {
+        "domain" : "com.apple.driver.AppleBluetoothMultitouch.trackpad",
+        "Clicking" : true,
+        "TrackpadThreeFingerDrag" : true,
+        "TrackpadThreeFingerHorizSwipeGesture" : false,
+        "TrackpadThreeFingerVertSwipeGesture" : false,
+        "TrackpadFiveFingerPinchGesture" : true,
+        "TrackpadFourFingerPinchGesture" : true
+      },
+      "dashboard" : {
+        "domain" : "com.apple.dashboard",
+        "mcx-disabled" : false
+      },
+      "finder" : {
+        "domain" : "com.apple.finder",
+        "EmptyTrashSecurely" : true,
+        "FXArrangeGroupViewBy" : "Name",
+        "FXPreferredViewStyle" : "clmv",
+        "NewWindowTarget" : "PfHm",
+        "ShowExternalHardDrivesOnDesktop" : true
+      },
+      "global" : {
+        "domain" : "NSGlobalDomain",
+        "InitialKeyRepeat" : 15,
+        "KeyRepeat" : 2,
+        "NSAutomaticSpellingCorrectionEnabled" : false,
+        "NSUserReplacementItemsEnabled" : false,
+        "WebAutomaticSpellingCorrectionEnabled" : true,
+        "WebAutomaticTextReplacementEnabled" : 0,
+        "com.apple.springing.delay" : "0.5",
+        "com.apple.springing.enabled" : 1,
+        "com.apple.trackpad.scaling" : 3
+      },
+      "safari" : {
+        "domain" : "com.apple.Safari",
+        "AutoFillFromAddressBook" : true,
+        "AutoFillMiscellaneousForms" : true,
+        "AutoFillPasswords" : true,
+        "AutoOpenSafeDownloads" : false,
+        "HistoryAgeInDaysLimit" : 365000,
+        "IncludeDevelopMenu" : true,
+        "NewTabBehavior" : 4,
+        "NewWindowBehavior" : 4,
+        "SafariGeolocationPermissionPolicy" : false,
+        "SendDoNotTrackHTTPHeader" : true,
+        "WebKitDefaultFixedFontSize" : 12,
+        "SearchProviderIdentifier" : "com.bing.www"
+      },
+      "screensaver" : {
+        "domain" : "com.apple.screensaver",
+        "askForPassword" : 1,
+        "askForPasswordDelay" : 5
+      }
+    }
   }
 }

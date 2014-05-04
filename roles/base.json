@@ -1,0 +1,15 @@
+{
+  "name": "base",
+  "description": "Sets up a base unix system",
+
+  "default_attributes": {},
+  "override_attributes": {},
+
+  "user_config": "simon",
+
+  "run_list": [ 
+    "recipe[oh-my-zsh]",
+    "recipe[git-settings]",
+    "recipe[vim]"
+  ]
+}
