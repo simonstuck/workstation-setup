@@ -11,7 +11,8 @@
     "recipe[mac_os_x::settings]",
     "recipe[mac_os_x::firewall]",
     "recipe[mac_os_x::autoupdate]",
-    "recipe[workstation]"
+    "recipe[workstation]",
+    "recipe[rvm::user]"
   ],
 
   "default_attributes": {},
@@ -19,6 +20,23 @@
   "chef_type": "role",
 
   "user_config": "Simon",
+
+  "rvm" : {
+    "user_installs" : [
+      {
+        "user" : "Simon",
+        "default_ruby" : "2.0.0",
+        "rubies" : [
+          "2.0.0"
+        ],
+        "user_gems" : [
+          { "name" : "bundler" },
+          { "name" : "rake" },
+          { "name" : "chef" }
+        ]
+      }
+    ]
+  },
 
   "mac_os_x": {
     "settings": {
