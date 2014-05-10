@@ -53,7 +53,7 @@
       },
       "finder" : {
         "domain" : "com.apple.finder",
-        "EmptyTrashSecurely" : true,
+        "EmptyTrashSecurely" : false,
         "FXArrangeGroupViewBy" : "Name",
         "FXPreferredViewStyle" : "clmv",
         "NewWindowTarget" : "PfHm",
