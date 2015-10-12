@@ -57,15 +57,6 @@ script "install nerdtree from Github" do
   not_if { File.directory? "#{ENV['HOME']}/.vim/bundle/nerdtree" }
 end
 
-script "install numbers from Github" do
-  interpreter "bash"
-  url = "https://github.com/myusuf3/numbers.vim.git"
-  code <<-EOS
-    git clone #{url} #{ENV['HOME']}/.vim/bundle/numbers
-  EOS
-  not_if { File.directory? "#{ENV['HOME']}/.vim/bundle/numbers" }
-end
-
 script "install fugitive from Github" do
   interpreter "bash"
   url = "https://github.com/tpope/vim-fugitive.git"

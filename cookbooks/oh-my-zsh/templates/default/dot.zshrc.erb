@@ -49,26 +49,5 @@ export PATH=$PATH:/sbin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/sbin
 
-# Easy ssh into Imperial machines
-# Thanks to Thomas Rooney (https://github.com/ThomasRooney)
-impssh() {
-  shellServerIndex=$((RANDOM%4+1))
-
-  username="<%= @user["imperialuser"] %>"
-
-  shellServer=shell$shellServerIndex.doc.ic.ac.uk
-
-  if (( $# >= 1 )) ; then
-    ssh -A -t $username@$shellServer "ssh -A -t $1"
-  else
-    ssh $username@$shellServer
-  fi
-}
-
-# For the incredibly lazy...
-alias sshe='impssh edge22'
-alias sshf='impssh fusion24'
-alias sshp='impssh project04'
-
 # Some other aliases for extra laziness
 alias l='ls -la'
